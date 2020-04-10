@@ -2,6 +2,7 @@
 
 mail="@gmail.com"
 f="filename.txt"
+
 usage()
 {
     echo ""
@@ -16,9 +17,21 @@ usage()
 
 create_file()
 {
-    master="$(basename $f | cut -d. -f1).txt"
-    passwd="$(echo $master | cut -d. -f1)-passwd.txt"
-    login="$(echo $master | cut -d. -f1)-login.txt"
+    fbasename=$(basename $f | cut -d. -f1)
+    master=${fbasename// /}-master.txt
+    passwd=${fbasename// /}-passwd.txt
+    login=${fbasename// /}-login.txt
+    touch $master $passwd $login
+}
+
+main()
+{
+    while true;do echo -n .;sleep 1;done &
+    echo -e "$(find /home/kali/data -type f -exec cat {} + | grep $mail)\n" >> $master
+    awk -F':' '{print $1}' $master > $login
+    awk -F':' '{print $2}' $master > $passwd
+    kill $!; trap 'kill $!' SIGTERM
+    echo -e "\ndone"
 }
 
 while [[ "$1" != "" ]]; do
@@ -49,5 +62,4 @@ while [[ "$1" != "" ]]; do
     shift
 done
 create_file
-
-
+main
