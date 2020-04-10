@@ -14,6 +14,13 @@ usage()
     echo ""
 }
 
+create_file()
+{
+    master="$(basename $f | cut -d. -f1).txt"
+    passwd="$(echo $master | cut -d. -f1)-passwd.txt"
+    login="$(echo $master | cut -d. -f1)-login.txt"
+}
+
 while [[ "$1" != "" ]]; do
     PARAM=$(printf "%s\n" $1 | awk -F= '{print $1}')
     VALUE=$(printf "%s\n" $1 | sed 's/^[^=]*=//g')
@@ -41,6 +48,6 @@ while [[ "$1" != "" ]]; do
     esac
     shift
 done
-
+create_file
 
 
