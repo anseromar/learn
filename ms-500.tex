@@ -1,0 +1,178 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% MatPlotLib and Random Cheat Sheet
+%
+% Edited by Michelle Cristina de Sousa Baltazar
+%
+% http://matplotlib.org/api/pyplot_summary.html
+% http://matplotlib.org/users/pyplot_tutorial.html
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{article}
+\usepackage[landscape]{geometry}
+\usepackage{url}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathmorphing}
+\usepackage{amsmath,amssymb}
+
+\usepackage{colortbl}
+\usepackage{xcolor}
+\usepackage{mathtools}
+\usepackage{amsmath,amssymb}
+\usepackage{enumitem}
+
+\title{MatPlotLib and Random Cheat Sheet}
+\usepackage[brazilian]{babel}
+\usepackage[utf8]{inputenc}
+
+\advance\topmargin-.8in
+\advance\textheight3in
+\advance\textwidth3in
+\advance\oddsidemargin-1.5in
+\advance\evensidemargin-1.5in
+\parindent0pt
+\parskip2pt
+\newcommand{\hr}{\centerline{\rule{3.5in}{1pt}}}
+%\colorbox[HTML]{e4e4e4}{\makebox[\textwidth-2\fboxsep][l]{texto}
+\begin{document}
+
+\begin{center}{\huge{\textbf{Protéger les identités et les accès avec Microsoft
+365}}}\\
+{\large La gestion des identités et des accès dans Microsoft 365 (1) \& 
+Le déploiement des accès et des identités avec Microsoft 365 (2)}
+\end{center}
+\begin{multicols*}{3}
+
+\tikzstyle{mybox} = [draw=black, fill=white, very thick,
+    rectangle, rounded corners, inner sep=10pt, inner ysep=10pt]
+\tikzstyle{fancytitle} =[fill=black, text=white, font=\bfseries]
+%------------ CONTEÚDO CAIXA RANDOM ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth}
+        Azure Active Directory est un composant de Microsoft 365. Les
+        technologies sur lesquelles il repose permettent de veiller à ce que
+        seuls les utilisateurs approuvés disposent d'un accès approprié à vos
+        données.
+     \end{minipage}
+};
+%------------ CAIXA RANDOM ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {1.Intro. à la gestion des identités et des accès};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth}
+        Microsoft a d'abord abordé la gestion des identités et des accès
+        avec les domaines Windows NT pour regrouper les comptes locaux. Plus
+        tard, il a développé Active Directory, l'authentification par carte à
+        puce et la prise en charge de l'authentification multifacteur fournie
+        par des tiers.\newline
+        Microsoft 365 adopte une approche globale :
+        \begin{itemize}
+            \item Azure Active Directory (Azure AD) pour la gestion
+            unifiée des identités afin de gérer et de sécuriser
+            l'authentification unique à grande échelle
+            \item Authentification sans mot de passe, comme
+            l'authentification téléphonique intégrée (Microsoft Authenticator)
+            et la biométrie (Windows Hello), pour plus de commodité et de
+            productivité pour l'utilisateur
+            \item Isolement des identifiants matériels, comme le
+            module de plateforme sécurisée (TPM) et les clés de sécurité, pour
+            une authentification simple et sécurisée sur les appareils partagés
+        \end{itemize}
+
+    \end{minipage}
+};
+%------------ CAIXA RANDOM ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {1.Les technologies de gestion des identités};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth}
+        L'authentification à facteur unique, comme les mots de passe, ne
+        suffit pas pour dissuader les attaques modernes.\newline
+        Le nouveau paysage des menaces exige de passer de la
+        sécurisation des périmètres à la protection des identités.\newline
+    \end{minipage}
+};
+    %------------ CAIXA RANDOM ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {1.L’importance de l’identité};
+\end{tikzpicture}
+    
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth}
+        L'identité constitue la nouvelle défense centrale et le nouveau
+        point de contrôle. Elle sécurise les données de votre organisation sur
+        les applications, emplacements et appareils divers tout en fournissant
+    \end{minipage}
+};
+%------------ CAIXA RANDOM ---------------------
+\node[fancytitle, right=5pt] at (box.north west) {1.Pourquoi l’identité est essentielle à la sécurité};
+\end{tikzpicture}
+    
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth}
+        une stratégie complète de gestion des identités et des accès.
+        Le réseau d'entreprise reste le système de défense initial, mais
+        il existe désormais une couche de protection supplémentaire.\newline
+        Grâce à l'utilisation de l'identité comme nouveau plan de
+        contrôle, chaque fois que les utilisateurs tentent d'accéder aux données
+        à partir du réseau, leurs données personnelles et celles des appareils
+        sont examinées et authentifiées.\newline
+        Microsoft 365 répond au risque d'accès détecté :
+        \begin{itemize}
+            \item  Microsoft Defender peut détecter les menaces
+            relatives à l'intégrité (telles que les programmes malveillants) sur
+            l'appareil et y remédier.
+            \item Microsoft Intune peut envoyer des instructions à
+            Christina et l'aider à résoudre le problème.
+        \end{itemize}
+    \end{minipage}
+};
+%------------ CAIXA RANDOM ---------------------
+\node[] at (box.north west) {};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth}
+        Les fonctionnalités de sécurité d’Azure AD permettent de:
+        \begin{itemize}
+            \item  Créer et gérer une identité unique pour chaque
+            utilisateur de votre entreprise hybride, en synchronisant les
+            utilisateurs, les groupes et les appareils
+            \item Fournir un accès à authentification unique (SSO) à
+            vos applications, y compris à des milliers d'applications SaaS
+            pré-intégrées
+            \item Fournir un accès à distance sécurisé aux
+            applications web locales via le proxy d'application Azure AD
+            \item Sécuriser l'accès aux applications locales et
+            cloud en appliquant l'authentification multifacteur basée sur des
+            règles
+        \end{itemize}
+    \end{minipage}
+};
+%------------ CAIXA RANDOM ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {2.Intro. à la fourniture d'identité};
+\end{tikzpicture}
+        
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth}
+    \end{minipage}
+};
+%------------ CAIXA RANDOM ---------------------
+\node[fancytitle, right=0pt] at (box.north west) {2.Déployer l’authentification unique transparente};
+\end{tikzpicture}
+    
+
+\end{multicols*}
+\end{document}
+
